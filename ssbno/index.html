@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistics Portal</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .header {
+        background-color: white;
+        color: #274247;
+        padding: 1rem;
+    }
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .logo-title-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        background-color: #274247;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header h1 {
+        margin: 0;
+        margin-bottom: -0.5rem;
+    }
+
+    .header p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-box {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .nav {
+        background-color: #f5f5f5;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: .6rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        max-width: 180px;
+    }
+
+    .nav-item:hover {
+        color: #1a4f85;
+    }
+
+    .nav-item svg {
+        flex-shrink: 0;
+    }
+
+    .nav-item p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .stats-grid-background {
+        background-color: #274247;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+    }
+
+    .stat-box {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #274247;
+        margin-bottom: 0.5rem;
+    }
+
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .tool-button {
+        background-color: #274247;
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .tool-button:hover {
+        background-color: #153d66;
+    }
+</style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-title-container">
+                <div class="logo"></div>
+                <div class="title-container">
+                    <h1 style="font-size: 1.3rem;">Statistisk sentralbyra</h1>
+                    <p>Statistics Norway</p>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="search" class="search-box" placeholder="Search for statistics, articles, and more...">
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Labour market & education</p>
+            </a>
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Population & housing</p>
+            </a>
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Health & society</p>
+            </a>
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Environment & transport</p>
+            </a>
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Business & technology</p>
+            </a>
+            <a href="#" class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+                <p>Economy</p>
+            </a>
+        </div>
+    </nav>
+    <main class="main-content">
+        <div class="stats-grid-background">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-label">GDP per capita</div>
+                    <div class="stat-number">982,400</div>
+                    <div class="stat-date">NOK</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Average yearly earnings</div>
+                    <div class="stat-number">668,400</div>
+                    <div class="stat-date">NOK</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Consumer price index</div>
+                    <div class="stat-number">2.6</div>
+                    <div class="stat-date">%</div>
+                </div>
+            </div>
+        </div>
+        <div class="tools-grid">
+            <button class="tool-button">Name Search</button>
+            <button class="tool-button">Inflation Calculator</button>
+            <button class="tool-button">Rent Calculator</button>
+        </div>
+    </main>
+</body>
+</html>
